@@ -19,6 +19,7 @@ on the plot.
 ## Question 2
 Simulate a three-class dataset with 50 observations in each class and two features. Make
 sure that this dataset is not linearly separable.
+
 (1) Make a scatter plot to show your dataset.
 
 (2) Split the dataset to a training set (50%) and a test set (50%). Train the support
