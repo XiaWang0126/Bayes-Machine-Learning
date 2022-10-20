@@ -1,14 +1,11 @@
-# Network-analytics
+# Machine Learning
 
 ## Module overview
 
-Networks are ubiquitous: job offerings reach us via inter-personal connections; what we see on the screen of our digital device is a function of the relationships we develop in the digital world; market valuations are ― largely ― the byproduct of social influence, which accumulates and spreads over relations. This module provides students with cutting-edge network theories and practical tools to appreciate the organization and functioning of disparate networks. Ultimately, the goal is to develop a distinctive angle on how networks bring value to individuals, organizations, and communities.
+This module will introduce you with fundamental concepts of machine learning and popular machine learning algorithms and their implementations in R and Python. 
 
-## Learning objectives
+We will learn famous supervised learning and unsupervised learning algorithms and how to use them to solve real-world problems. We aim to understand the intuitions and the physical meanings of the objective functions of the algorithms. We will also know how to use these algorithms in R and Python to complete tasks with real-world datasets.
 
-- appreciate the properties of networks;
-- appreciate the properties of communities of nodes belonging to a network;
-- appreciate the properties of individual nodes belonging to a network;
-- visually represent the key features of networks;
-- leverage the most advanced Python modules for network analytics;
-- mobilize key network analytics notions and tools in order to produce elegant, effective, and efficient solutions to practical problems in the field of business strategy, product innovation, and operations.
+After this module, you will understand what is machine learning and how to use machine learning methods to solve real-world problems. You will also acquire essential programming skills to apply popular machine learning methods.
+
+
