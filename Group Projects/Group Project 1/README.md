@@ -5,7 +5,9 @@ random forest. The aim of this app is to present to your clients with little kno
 about machine learning, on how decision tree and random forest work and what are the
 conclusions of your analysis of the data. 
 
-Note: 1) You can use any dataset that you like,
+Note: 
+
+1) You can use any dataset that you like,
 but please make sure that the dataset is with less than 500 observations and 50 features
 for illustrative purpose. If you find a large dataset that is interesting to analyse, please
 down sample the dataset to fit the criterion. 
