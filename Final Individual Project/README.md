@@ -1,20 +1,63 @@
 # Final Individal Course Project
 
-## Project background
-The compound of technologies we use to call 'AI' promises to revolutionize many sectors. However, there is a substantial gap between what firms say they do with AI and what they actually do with it [1]. Several factors could account for such a gap: the adoption of AI tools is costly since it tends to jeopardize an incumbent's operations [2]; there is a shortage of human capital trained in the area of AI [3]; developing AI applcations may require businesses to cope with ethical/societal implications [4, 5] and regulatory issues [6]. In the context of knowledge intensive industries, there is yet another obstacle to the diffusion of AI, namely, 'professionals.' While some individuals may be thrilled to integrate AI in their daily work, some others may just feel threatened. This FCP deals with the distribution of security traders opinions about the impact AI can make on 'trading floors.'
+## Question 1
+Use the German credit data. Split the data to a training set (70%) and a test set (30%).
 
-## Aim & context
-You're a 'quant' business analyst working for a consultancy company that has to help a client to sustain the diffusion of AI. Specifically, the client is a large investment bank that would like to persuade traders to engage more with AI tools when it comes evaluating securities.
+(1) Fit a decision tree to the training data with an optimal tree size determined by
+5-fold cross-validation. Create a plot of the pruned tree and interpret the results.
+Compute the test error rate of the pruned tree.
 
-## Dataset
-In order to get a better understanding of traders' attitudes toward AI, you have circulated a survey in a large trading floor located in Canary Wharf. The resulting dataset (trading_floor.xml) contains 192 responses regarding:
+(2) Fit a random forest to the training data with the parameter of the number of features
+to create the splits tuned by 5-fold cross-validation. Set the number of trees to 1000.
+Compute the test error rate and comment on the results. Create a plot showing
+variable importance for the model with the tuned parameter and comment on the
+plot.
 
-- the undirected network of knowledge exchange between traders (traders A and B are connected when A says he/she shares technical and industry knowledge with B and vice versa)
-- a trader's opinion about the contribution of AI to his/her productivity and effectiveness in evaluating securities (1 = not at all; 10 = to a great extent). In the datasets, this variable is reported as the node attribute ai.
-Thanks to the cooperation of the client, you also know the traders' location in the floor. There are six zones, each of which hosts 32 individuals (16 individuals on each side of the zone). The above-displayed picture gives you an idea of the layout of the trading floor. In the dataset, the location of traders is reported as two node attributes, that is, x-pos and y-pos.
+(3) Draw one plot with two ROC curves for the test predictions in (1) and (2). Comment
+on the plot.
 
-## Questions
-1. How do traders' opinions map onto the knowledge exchange network?
-2. How do traders' opinions map onto the physical layout of the trading floor?
-3. What are the network-related obstacles to the diffusion of positive opinions about AI in the trading floor?
-4. What is your recommendation to promote the diffusion of positive opinions about AI in the trading floor?
+## Question 2
+Simulate a three-class dataset with 50 observations in each class and two features. Make
+sure that this dataset is not linearly separable.
+(1) Make a scatter plot to show your dataset.
+
+(2) Split the dataset to a training set (50%) and a test set (50%). Train the support
+vector machine with a linear kernel, a polynomial kernel and an RBF kernel on the
+training data. The parameters associated with each model should be tuned by 5-fold
+cross-validation. Test the models on the test data and discuss the results.
+
+## Question 3
+Download the newthyroid.txt data from moodle. This data contain measurements for
+normal patients and those with hyperthyroidism. The first variable class=n if a patient
+is normal and class=h if a patients suffers from hyperthyroidism. The rest variables
+feature1 to feature5 are some medical test measurements.
+
+(1) Apply kNN and LDA to classify the newthyroid.txt data: randomly split the data
+to a training set (70%) and a test set (30%) and repeat the random split 10 times.
+For kNN, use 5-fold cross-validation to choose k from (3, 5, 7, 9, 11, 13, 15). Use AUC
+as the metric to choose k, i.e. choose k with the largest AUC.
+Record the 10 test AUC values of kNN and LDA in two vectors.
+
+(2) Draw two boxplots in one plot based on the 10 AUC values of kNN and LDA.
+
+(3) What conclusions can you make from the classification results of kNN and LDA on
+the newthyroid.txt data?
+
+## Question 4
+Write a user-defined function to provide the training indexes for K-fold cross-validation
+with the following requirements:
+
+• Input: the label vector, K, the seed or random state.
+
+• Output: the training indexes for each iteration.
+
+• Make sure that the class labels in each fold follow the original distribution. For
+example, if the numbers of instances in three classes are (100,50,50), then in each
+fold the ratio of the numbers of instances in the three classes should be roughly
+2 : 1 : 1.
+
+• You cannot use functions such as RepeatedKFold, createFolds, etc. You need to
+write your own function.
+
+Use this function to produce the training indexes for 10-fold cross-validation on the GermanCredit data.
+
